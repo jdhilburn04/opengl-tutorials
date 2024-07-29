@@ -31,7 +31,14 @@ int main()
 	// Tell GLFW we are using the CORE profile
 	// So that means we only have the modern functions
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-
+	// Specify the coordinates of our vertices.
+	GLfloat vertices[] =
+    	{
+        	-0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f,
+        	0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f,
+        	0.0f, 0.5f * float(sqrt(3)) * 2 / 3, 0.0f
+    	};
+	
 	// Create a GLFWwindow object of 800 by 800 pixels, naming it "YoutubeOpenGL"
 	GLFWwindow* window = glfwCreateWindow(800, 800, "YoutubeOpenGL", NULL, NULL);
 	// Error check if the window fails to create
